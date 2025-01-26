@@ -1,0 +1,54 @@
+body{
+    font-family:Arial, Helvetica, sans-serif ;
+    background-color: aquamarine;
+    color:rgb(18, 95, 69);
+}
+
+h1{
+    color:rgb(92, 145, 145);
+}
+
+a{
+    color:rgb(67, 67, 119);
+    text-decoration: none;
+}
+
+a:hover{
+    color:coral;
+}
+
+ol > li{
+    font-weight: bold;
+}
+
+h1 + p{
+    background-color: chocolate;
+    color:rgb(105, 38, 38);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+ol li:hover{
+    color:greenyellow;
+}
+
+ol li:nth child(4){
+    background-color: rgb(47, 255, 168);
+}
+
+p:not(:first-of-type){
+    text-decoration: underline;
+}
+
+ol li:before{
+    content: " 🚀 ";
+}
+
+a::after{
+    content: "🚜";
+}
+
+p::first-letter{
+    font-size: 200%;
+    color:goldenrod;
+}
