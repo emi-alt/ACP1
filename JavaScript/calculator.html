@@ -1,0 +1,18 @@
+<html>
+<body>
+    <p id="result"></p>
+    <button onclick="myFunction()">Show me the results</button>
+    <P id="answer"></P>
+    <script>
+        var a = 5
+        var b = 8
+        var sum = a + b
+        var multiply = a*b
+        var difference = a-b 
+        document.getElementById("result").innerHTML = "The sum of two numbers a and b is " + sum + ", multiplication is " + multiply + " and difference is " + difference + "." + "<br>" + " Now guess what are the a and b?"
+        function myFunction() {
+            document.getElementById("answer").innerHTML = "a = 5" + "<br>" + "b = 8";
+        }
+    </script>
+</body>
+</html>
