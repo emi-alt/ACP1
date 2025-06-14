@@ -1,0 +1,17 @@
+<html>
+<body>
+    <p id="result"></p>
+    <script>
+        function multiply(a,b) {
+        var a = 4;
+        if (b == undefined) {
+            alert("The value of b is undefined.")
+            b = 7;
+        }
+        var result = a*b;
+        document.getElementById("result").innerHTML = result;
+    }
+    multiply(a, b)
+    </script>
+</body>
+</html>
