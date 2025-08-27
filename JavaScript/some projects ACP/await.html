@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <p id="result"></p>
+    </body>
+    <script>
+        async function product(a, b) {
+            let response = Number(a) * Number(b);
+            return response;
+        }
+        function display(some){
+            document.getElementById("result").innerHTML = some;
+        }
+        product(5, 10).then(display);
+    </script>
+</html>
