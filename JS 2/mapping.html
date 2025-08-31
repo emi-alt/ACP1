@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Mapping - Ascending and Descenting</title>
+        <style>
+              body{
+            background-color: #B8695A;
+            color: rgb(73, 66, 116);
+        }
+        h1{
+            text-align: center;
+            color: #3c5ea8;
+        }
+        button{
+            background-color: #B8695A;
+            color: thistle;
+            font-size: 20px;
+            border-radius: 20px;
+            box-shadow: rgb(61, 42, 187) 10px 10px 5px;
+        }
+        p{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        </style>      
+    </head>
+    <body>
+        <h1> <u>Mapping - Ascending and Descending</u></h1>
+        <p style="display:inline-block" id="ascend">This is an ascending array</p> <button onclick ="ascending()">Ascending array</button> 
+        <br> <br>
+        <p style="display:inline-block" id="descend">This is a descending array</p> <button onclick="descending()">Descending array</button>
+    </body>
+    <script>
+        let array = [4, 6, 2, 10, 8];
+
+        function ascending() {
+            let asc = array.slice().sort((a, b) => a - b).map((num) => num * 100);
+            document.getElementById("ascend").innerHTML = "Ascending array: " + asc;
+        }
+        function descending() {
+            let desc = array.sort((a, b) => b - a).map((num) => num *100);
+            document.getElementById("descend").innerHTML = "Descending array: " + desc;
+        }
+    </script>
+</html>
