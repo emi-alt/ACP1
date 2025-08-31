@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            body{
+  background-color: #613D41;
+}
+h2, h3{
+  color: #A36065;
+}
+input{
+  font-size: 15px;
+  color: #A36065;
+  background-color: #4C2929;
+}
+button{
+  background-color: #4C2929;
+  color: #A36065;
+}
+
+        </style>
+    </head>
+    <body>
+        <h2>Make a Shopping list!</h2>
+        <form id="form">
+          <input id="ip"></input>
+          <button>Add item!</button>
+        </form>
+        <h3>items</h3>
+          <ol id="it"></ol>
+    </body>
+    <script>
+        var fm = document.getElementById("form");
+        var ip = document.getElementById("ip");
+        var it = document.getElementById("it");
+
+        fm.addEventListener("submit", 
+             function(event){
+                event.preventDefault();
+                createItem(ip.value);
+             })
+
+        function createItem(ipitem){
+             var item = `<li>${ip.value} <button class="delete-btn">delete</button></li>`;
+             it.insertAdjacentHTML("beforeend", item);
+             ip.value = "";
+             ip.focus();
+            }
+
+        it.addEventListener("click", function(event) {
+            if (event.target.classList.contains("delete-btn")) {
+                event.target.parentElement.remove();
+            }
+        });
+    </script>
+</html>
