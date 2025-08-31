@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h1>Error and catch in Javascript</h1>
+        <button id="result" onclick="te()">Show Error</button>
+        <script>
+            function te() {
+            try {
+                let x = y + 1;
+            } catch (err) {
+                document.getElementById("result").innerHTML = "Error: " + err.message;
+                console.log(err);
+            }
+            }
+        </script>
+    </body>
+</html>
